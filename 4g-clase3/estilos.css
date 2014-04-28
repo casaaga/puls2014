@@ -259,12 +259,13 @@ aside{
 {
 	background: white;
 	border-radius: 0 0 0.5em 0.5em;
-	left: 1%; 
+	left: 3%; 
 	margin-top: 3px;
 	padding: 0.2em 0.5em;
 	position: absolute;
+	right: 3%;
 	top: 100%;
-	width: 95%;
+	/*width: 95%;*/
 }
 #contenido .item .votacion a
 {
