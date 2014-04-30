@@ -1,0 +1,20 @@
+En tu html coloca al principio un elemento con una clase donde vas a poner el ícono con un icon-font. Luego con CSS en resoluciones mayor a X tamaño lo ocultas y menores a ese X tamaño lo muestras y ocultas el resto.
+<nav>
+  <ul>
+    <li class="icono-menu"></li>
+    <li>Link 1</li>
+    ...
+</nav>CSS:
+@media screen and (min-width: 480px) {
+  .icono-menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .icono-menu {
+    display:block;
+  }
+  ul li {
+    display: none;
+  }
+}Luego con JS cuando haces click en .icono-menu cambias el display de los demás elementos a block, también podes hacer que en vez de ocultar los demás elemento limitar la altura del ul a la de 1 solo elemento (si sabes cuanto miden) y ese único elemento que se mostraría sería el .icono-menu, luego con JS cambias el max-height a un número muy alto para que se muestre, con esto podes hacer una animación con CSS3 de como se muestra/oculta.
